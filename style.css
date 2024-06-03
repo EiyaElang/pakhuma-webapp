@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-image: url("gambar/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.nav-box {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+.nav {
+    padding: 30px 200px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0, 91, 119, 0.8), rgba(0, 0, 0, 0));
+}
+
+.nav-judul {
+    font-size: 34px;
+    font-family:  "Abel", sans-serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: black 4px 4px 8px;
+    padding: 5px;
+}
+
+.nav-page {
+    font-family:  "Abel", sans-serif;
+    font-size: 24px;
+    padding: 0;
+}
+
+li a {
+    padding: 10px 15px;
+    color: white;
+}
+
+li a:hover {
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+}
+
+.sign {
+    background-color: rgb(0, 152, 223);
+    border-radius: 10px;
+}
+
+li {
+    padding: 10px 15px;
+    text-shadow: black 4px 4px 8px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
