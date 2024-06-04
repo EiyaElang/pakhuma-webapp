@@ -110,13 +110,15 @@ input[type=text], input[type=password], input[type=email], select {
 
 input[type=submit], select {
     width: 100%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
+    border: solid;
+    border-width: thin;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 38px;
 }
 
 .box-form {
@@ -160,14 +162,14 @@ input[type=submit], select {
 }
 
 .sistem-page {
-    margin: 15% auto;
-    width: 80%;
-    height: 800px;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    height: 100%;
+    overflow: hidden;
     background-color: white;
     box-shadow: 1px 1px 12px;
-    border-radius: 20px;
     text-align: center; 
-    padding: 20px;
+    padding-bottom: 100px;
 }
 
 .choose {
@@ -177,7 +179,12 @@ input[type=submit], select {
 
 .choose-page ul li {
     font-size: 28px;
-    margin: 0 5%;
+    margin-right: 50px;
+}
+
+.choose-page ul {
+    font-size: 28px;
+    
 }
 
 .row-sistem {
@@ -207,6 +214,38 @@ input[type=submit], select {
 }
 
 .sistem-judul {
+    font-weight: bold;
     font-size: 42px;
     margin: 5%;
+}
+
+.box-location {
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+}
+
+.box-location-row {
+    margin: 0 120px;
+}
+
+#tombol-rute {
+    padding: 20px;
+    color: white;
+    background-color: rgb(110, 175, 255);
+    border-radius: 8px;
+    border-style: none;
+}
+
+#additional-route {
+    font-size: 34px;
+    display: flex;
+    justify-content: center; 
+}
+
+.tema {
+    margin-top: 20%;
+    text-align: center;
+    letter-spacing: 30px;
+    text-shadow: black 4px 4px 20px;
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edamame Travel</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="nav-box">
+<div class="nav">
+    <a href="index.html"><div class="nav-judul">Edamame Travel</div></a>
+    <div class="nav-page">
+        <ul>
+            <li><a href="signup.html" class="sign-out">Log-out</a></li>
+        </ul>
+    </div>
+</div>
+<div class="choose">
+    <div class="choose-page">
+        <ul>
+            <li><a href="sistem-pesawat.html">Pesawat</a></li>
+            <li><a href="sistem-bus.html">Bus</a></li>
+        </ul>
+    </div>
+</div>
+</div> 
+
+<div class="sistem-page">
+    <div class="sistem-judul">Rute Bus Kamu!</div>
+    <div class="box-location">
+      <div class="box-location-row">
+        <label for="origin">Dari:</label>
+        <select id="origin"></select>
+      </div>
+      <div class="box-location-row">
+        <label for="destination">Destinasi:</label>
+        <select id="destination"></select>
+      </div>
+    </div>
+
+    <button id="tombol-rute">Tambah Rute</button>
+    
+    <div  id="additional-route" style="display: none;">
+      <div class="box-location-row">
+        <label for="origin">Dari:</label>
+        <select id="origin-additional"></select>
+      </div>
+      <div class="box-location-row">
+        <label for="destination">Destinasi:</label>
+        <select id="destination-additional"></select>
+      </div>
+    </div>
+</div>
+
+<script src="rute.js"></script>
+
+</body>
+</html>
