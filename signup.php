@@ -1,3 +1,35 @@
+<?php
+session_start();
+include 'koneksi.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['uname'];
+    $email = $_POST['email'];
+    $password = $_POST['psw'];
+
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    $query = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($query);
+
+    if ($stmt === false) {
+        die('Prepare Error: ' . htmlspecialchars($conn->error));
+    }
+
+    $stmt->bind_param("sss", $username, $email, $hashed_password);
+
+    if ($stmt->execute()) {
+        echo "<script>alert('Sign-Up berhasil! Silakan login.');window.location.href='login.php';</script>";
+    } else {
+        echo "<script>alert('Sign-Up gagal! Silakan coba lagi.');window.location.href='signup.php';</script>";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +49,9 @@
     <div class="nav-page">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="pesan.html">Pesan Tiket</a></li>
-            <li><a href="login.html">Log-In</a></li>
-            <li><a href="signup.html" class="sign">Sign-Up</a></li>
+            <li><a href="login.php">Pesan Tiket</a></li>
+            <li><a href="login.php">Log-In</a></li>
+            <li><a href="signup.php" class="sign">Sign-Up</a></li>
         </ul>
     </div>
 </div>
@@ -27,7 +59,7 @@
 
 <div class="box-form">
     <div class="form-judul">Sign-Up</div>
-    <form action="">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <div class="form-text">
             Username
             <br>
