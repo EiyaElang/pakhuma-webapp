@@ -3,6 +3,7 @@ body {
     background-image: url("gambar/background.jpg");
     background-size: cover;
     background-attachment: fixed;
+    font-family:  "Abel", sans-serif;
 }
 
 .nav-box {
@@ -21,7 +22,6 @@ body {
 
 .nav-judul {
     font-size: 34px;
-    font-family:  "Abel", sans-serif;
     letter-spacing: 2px;
     color: white;
     text-shadow: black 4px 4px 8px;
@@ -29,7 +29,6 @@ body {
 }
 
 .nav-page {
-    font-family:  "Abel", sans-serif;
     font-size: 24px;
     padding: 0;
 }
@@ -63,6 +62,26 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.box {
+    width: 100%;
+    margin-top: 15%;
+    padding: 30px 0;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.8) 5px 5px 8px;
+    color: white;
+}
+
+.box-text {
+    font-size: 68px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.box-deskripsi {
+    font-size: 28px;
+    margin-bottom: 100px;
 }
 
 .box-form {
@@ -120,5 +139,17 @@ input[type=submit], select {
 }
 
 .form-text button:hover {
-    opacity: 0.7;
+    opacity: 0.7;
+}
+
+.btn-home {
+    background-color: #007fb1;
+    padding: 25px 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-home:hover {
+    opacity: 0.7;
 }
